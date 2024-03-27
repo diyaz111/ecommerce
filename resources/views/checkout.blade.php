@@ -127,7 +127,7 @@
             @endif
             <div class="row">
                 <div class="col-md-4">
-                    <span class="light-text">Tax(21%)</span>
+                    <span class="light-text">Tax(11%)</span>
                 </div>
                 <div class="col-md-4 offset-md-4">
                     <span class="light-text" style="display: inline-block">${{ format($tax) }}</span>

@@ -57,12 +57,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <p class="light-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum perspiciatis ullam, aliquam eius deserunt iusto autem. Cumque omnis, architecto nostrum voluptatum quis temporibus alias suscipit quod reprehenderit. Quis, esse.
+
                         </p>
                     </div>
                     <div class="col-md-3 offset-md-1">
                         <p class="text-right light-text">Subtotal &nbsp; &nbsp;${{ format(Cart::subtotal()) }}</p>
-                        <p class="text-right light-text">Tax(21%) &nbsp; &nbsp; ${{ format(Cart::tax()) }}</p>
+                        <p class="text-right light-text">Tax(11%) &nbsp; &nbsp; ${{ format(Cart::tax()) }}</p>
                         <p class="text-right">Total &nbsp; &nbsp; ${{ format(Cart::total()) }}</p>
                     </div>
                 </div>

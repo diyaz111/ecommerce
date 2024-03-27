@@ -30,6 +30,7 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.orders.placed');
+        $sender = 'no-reply@gmail.com';
+        return $this->from($sender)->markdown('emails.orders.placed');
     }
 }

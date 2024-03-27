@@ -10,8 +10,10 @@ class CartController extends Controller
 {
 
     public function index() {
+        $tax = config('cart.tax');
         $mightLike = Product::mightAlsoLike()->get();
-        return view('cart')->with('mightLike', $mightLike);
+        return view('cart')->with(['mightLike'=> $mightLike,
+    'tax' => $tax]);
     }
 
     public function store() {
@@ -53,7 +55,7 @@ class CartController extends Controller
         session()->flash('success', 'item has been removed');
         return back();
     }
-    
+
     public function saveLater($id) {
         session()->forget('coupon');
         $item = Cart::get($id);
@@ -69,7 +71,7 @@ class CartController extends Controller
         session()->flash('success', 'Item has been saved for later');
         return redirect()->route('cart.index');
     }
-    
+
     public function addToCart($id) {
         session()->forget('coupon');
         $item = Cart::instance('saveForLater')->get($id);
